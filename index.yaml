@@ -2,8 +2,33 @@ apiVersion: v1
 entries:
   cert-manager-webhook-ovh:
   - apiVersion: v1
+    appVersion: v0.4.1
+    created: "2023-01-07T23:38:31.947505082Z"
+    description: OVH DNS cert-manager ACME webhook
+    digest: b613bee8f3287865b15e7ea5e4feb0384d4568901a3c86f3dbd183d327cf47b8
+    home: https://github.com/aureq/cert-manager-webhook-ovh
+    icon: https://raw.githubusercontent.com/aureq/cert-manager-webhook-ovh/main/assets/images/cert-manager-webhook-ovh.svg
+    keywords:
+    - cert-manager
+    - ovh
+    - dns
+    - lets-encrypt
+    - Let's Encrypt
+    - tls
+    - certificate
+    - ssl
+    maintainers:
+    - name: Aurélien Requiem
+      url: https://github.com/aureq
+    name: cert-manager-webhook-ovh
+    sources:
+    - https://github.com/aureq/cert-manager-webhook-ovh
+    urls:
+    - https://aureq.github.io/cert-manager-webhook-ovh/packages/cert-manager-webhook-ovh-v0.4.1.tgz
+    version: v0.4.1
+  - apiVersion: v1
     appVersion: v0.4.0
-    created: "2022-10-15T05:59:42.718562178Z"
+    created: "2023-01-07T23:38:31.946627538Z"
     description: OVH DNS cert-manager ACME webhook
     digest: 0d7442389c7aa3f23b1f11cb7409db2d370bbbfe50c3927fc0314bbf652fdd5e
     home: https://github.com/aureq/cert-manager-webhook-ovh
@@ -28,7 +53,7 @@ entries:
     version: v0.4.0
   - apiVersion: v1
     appVersion: v0.4.0-alpha.1
-    created: "2022-10-15T05:59:42.717891355Z"
+    created: "2023-01-07T23:38:31.945987006Z"
     description: OVH DNS cert-manager ACME webhook
     digest: 5ec08a8cf5672fc294d1bd35fa0961fb60c184e35e86e568696124d80a7207dd
     home: https://github.com/aureq/cert-manager-webhook-ovh
@@ -53,7 +78,7 @@ entries:
     version: v0.4.0-alpha.1
   - apiVersion: v1
     appVersion: v0.4.0-alpha.0
-    created: "2022-10-15T05:59:42.717208732Z"
+    created: "2023-01-07T23:38:31.945355774Z"
     description: OVH DNS cert-manager ACME webhook
     digest: 3ebc342393f8cb54ecee2afa24005db325e6178b9a8c74005b5318f4f8a9eafd
     home: https://github.com/aureq/cert-manager-webhook-ovh
@@ -76,4 +101,4 @@ entries:
     urls:
     - https://aureq.github.io/cert-manager-webhook-ovh/packages/cert-manager-webhook-ovh-v0.4.0-alpha.0.tgz
     version: v0.4.0-alpha.0
-generated: "2022-10-15T05:59:42.71653161Z"
+generated: "2023-01-07T23:38:31.944712342Z"
