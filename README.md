@@ -142,6 +142,40 @@ environment:
   NO_PROXY: "10.0.0.0/8,127.0.0.0/8,172.16.0.0/12,192.168.0.0/16,*.svc,*.cluster.local,*.svc.cluster.local,169.254.169.254,127.0.0.1,localhost,localhost.localdomain"
 ```
 
+### Split DNS support
+
+If you plan to use cert-manager to generate certificates for domains served via split DNS you need to ensure that your DNS server returns correct SOA record for your domain. Otherwise the certificate generation will fail with following error message:
+> Error presenting challenge: OVH API call failed: GET /domain/zone/com/status - HTTP Error 404: "This service does not exist"
+
+In order to verify the record:
+
+  ```
+  dig yourdomain.com soa
+  ```
+
+Example response:
+
+  ```
+  ; <<>> DiG 9.18.1-1ubuntu1.3-Ubuntu <<>> ovh.com soa
+  ;; global options: +cmd
+  ;; Got answer:
+  ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57237
+  ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+  ;; OPT PSEUDOSECTION:
+  ; EDNS: version: 0, flags:; udp: 65494
+  ;; QUESTION SECTION:
+  ;ovh.com.			IN	SOA
+
+  ;; ANSWER SECTION:
+  ovh.com.		86400	IN	SOA	dns.ovh.net. tech.ovh.net. 2023020402 86400 3600 3600000 600
+
+  ;; Query time: 52 msec
+  ;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+  ;; WHEN: Sat Feb 04 15:13:03 CET 2023
+  ;; MSG SIZE  rcvd: 88
+  ```
+
 ## Installation
 
 To install the cert-manager-webhook-ovh chart:
