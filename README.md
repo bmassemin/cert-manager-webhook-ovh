@@ -153,7 +153,7 @@ In order to verify the record:
   dig yourdomain.com soa
   ```
 
-Example response:
+Example correct response:
 
   ```
   ; <<>> DiG 9.18.1-1ubuntu1.3-Ubuntu <<>> ovh.com soa
@@ -169,6 +169,26 @@ Example response:
 
   ;; ANSWER SECTION:
   ovh.com.		86400	IN	SOA	dns.ovh.net. tech.ovh.net. 2023020402 86400 3600 3600000 600
+
+  ;; Query time: 52 msec
+  ;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+  ;; WHEN: Sat Feb 04 15:13:03 CET 2023
+  ;; MSG SIZE  rcvd: 88
+  ```
+
+Example incorrect response, notice the missing answer section:
+
+  ```
+  ; <<>> DiG 9.18.1-1ubuntu1.3-Ubuntu <<>> ovh.com soa
+  ;; global options: +cmd
+  ;; Got answer:
+  ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57237
+  ;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+  ;; OPT PSEUDOSECTION:
+  ; EDNS: version: 0, flags:; udp: 65494
+  ;; QUESTION SECTION:
+  ;ovh.com.			IN	SOA
 
   ;; Query time: 52 msec
   ;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
