@@ -27,10 +27,10 @@ Obtaining API keys from your OVH account (in which your DNS zones are hosted) wi
     - Application description: API Keys for Cert Manager Webhook OVH (or anything you'd like)
     - Validity: Unlimited
     - Rights: (pre-populated)
-      - `GET /domaine/zone/*`
-      - `PUT /domaine/zone/*`
-      - `POST /domaine/zone/*`
-      - `DELETE /domaine/zone/*`
+      - `GET /domain/zone/*`
+      - `PUT /domain/zone/*`
+      - `POST /domain/zone/*`
+      - `DELETE /domain/zone/*`
     - Restrict IPs: Leave blank or restrict as you need.
 
 Take note of the `ApplicationKey`, `ApplicationSecret` and `ConsumerKey` and save them in a **secure** location.
