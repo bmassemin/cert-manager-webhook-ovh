@@ -1,8 +1,8 @@
-{{- $schemaVersion := .Values.schemaVersion -}}
+{{- $schemaVersion := .Values.schemaVersion | trimAll " " -}}
+{{- $expectedVersion := "0.0.1" -}}
 {{- if $schemaVersion -}}
-  {{- $version := semver $schemaVersion -}}
-  {{- if ne ($version | semver "0.0.1") 0 -}}
-    {{- fail (printf "Error: Incorrect schemaVersion.\nExpected: 0.0.1\nProvided: '%s'\nPlease upgrade your 'values.yaml' file accordingly." $schemaVersion) -}}
+  {{- if (semverCompare (printf "!= %s" $expectedVersion) $schemaVersion) -}}
+    {{- fail (printf "Error: Incorrect schemaVersion.\nExpected: '%s'\nProvided: '%s'\nPlease upgrade your 'values.yaml' file accordingly." $expectedVersion $schemaVersion) -}}
   {{- end -}}
 {{- else -}}
   {{ fail (printf "Error: The schemaVersion cannot be empty in your `values.yaml`. Please provide a valid schemaVersion.\nRetrieve the latest `values.yaml` using:\n\thelm show values cert-manager-webhook-ovh-charts/cert-manager-webhook-ovh") }}
