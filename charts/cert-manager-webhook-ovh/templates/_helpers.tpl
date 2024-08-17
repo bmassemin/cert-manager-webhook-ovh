@@ -64,16 +64,16 @@ Returns true if ovhAuthenticationRef is correctly set.
 {{- define "cert-manager-webhook-ovh.isOvhAuthenticationRefAvail" -}}
   {{- if . -}}
     {{- if or (not .consumerKeyRef) (not .applicationKeyRef) (not .applicationSecretRef) }}
-      {{- fail "When 'ovhAuthenticationRef' is used, 'consumerKeyRef', 'applicationKeyRef' and 'applicationSecretRef' need to be provided." }}
+      {{- fail "Error: When 'ovhAuthenticationRef' is used, 'consumerKeyRef', 'applicationKeyRef' and 'applicationSecretRef' need to be provided." }}
     {{- end }}
     {{- if or (not .consumerKeyRef.name) (not .consumerKeyRef.key) }}
-      {{ fail "When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.consumerKeyRef.name' and 'ovhAuthenticationRef.consumerKeyRef.key'" }}
+      {{ fail "Error: When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.consumerKeyRef.name' and 'ovhAuthenticationRef.consumerKeyRef.key'" }}
     {{- end }}
     {{- if or (not .applicationKeyRef.name) (not .applicationKeyRef.key) }}
-      {{ fail "When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.applicationKeyRef.name' and 'ovhAuthenticationRef.applicationKeyRef.key'" }}
+      {{ fail "Error: When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.applicationKeyRef.name' and 'ovhAuthenticationRef.applicationKeyRef.key'" }}
     {{- end }}
     {{- if or (not .applicationSecretRef.name) (not .applicationSecretRef.key) }}
-      {{ fail "When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.applicationSecretRef.name' and 'ovhAuthenticationRef.applicationSecretRef.key'" }}
+      {{ fail "Error: When 'ovhAuthenticationRef' is used, you need to provide 'ovhAuthenticationRef.applicationSecretRef.name' and 'ovhAuthenticationRef.applicationSecretRef.key'" }}
     {{- end }}
     {{- eq "true" "true" -}}
   {{- end -}}

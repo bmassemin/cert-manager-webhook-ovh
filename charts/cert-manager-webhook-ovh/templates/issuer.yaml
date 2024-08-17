@@ -1,7 +1,7 @@
 {{- range $.Values.issuers }}
   {{- if .create }}
     {{- if or (and (.ovhAuthentication) (.ovhAuthenticationRef)) (and (not .ovhAuthentication) (not .ovhAuthenticationRef)) }}
-      {{ fail "For each issuer you wish to create, you need to define either 'ovhAuthentication' or 'ovhAuthenticationRef'" }}
+      {{ fail "Error: For each issuer you wish to create, you need to define either 'ovhAuthentication' or 'ovhAuthenticationRef'" }}
     {{- end }}
 apiVersion: cert-manager.io/v1
 kind: {{ .kind }}
