@@ -228,5 +228,13 @@ tolerations: []
 affinity: {}
 
 # see https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+# add annotations to the Deployment
 annotations: {}
+
+# see https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+# add annotations to the Pod
 podAnnotations: {}
+
+# see https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+# add labels to the Pod
+podLabels: {}
