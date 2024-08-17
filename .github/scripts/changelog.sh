@@ -3,6 +3,7 @@
 set -eu
 
 CHART_DIR="charts/cert-manager-webhook-ovh"
+SCHEMA_VERSION="0.0.1"
 
 COMMITS_TO_PUSH="$(git log --oneline -- "origin..HEAD"  | awk 'END { print NR }')"
 
@@ -24,7 +25,10 @@ fi
 
 if [ -d "$CHART_DIR" ]; then
     echo -n "Linting Chart $CHART_DIR: "
-    helm lint "$CHART_DIR" >/dev/null || exit 1
+    # check for helm syntax problems
+    helm lint "$CHART_DIR" --set "schemaVersion=${SCHEMA_VERSION}" >/dev/null 2>&1 || exit 1
+    # check for any error returned by the chart itself
+    helm lint "$CHART_DIR" --set "schemaVersion=${SCHEMA_VERSION}" 2>&1 >/dev/null | grep -i 'error' >/dev/null && exit 1
     echo "passed."
 else
     echo "Missing '$CHART_DIR'"
