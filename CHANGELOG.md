@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0-alpha.2
+
+### Noteworthy changes
+
+- 🌿 support adding customer labels to pod
+- 📄 slightly improve documentation in values.yaml
+
 ## 0.7.0-alpha.1
 
 ### Noteworthy changes
