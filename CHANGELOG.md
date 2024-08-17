@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0-alpha.3
+
+### Noteworthy changes
+
+- 🌿 rename schemaVersion to configVersion
+- 🐛 fix error when handling commented configVersion
+- 🌿 improve version check
+
 ## 0.7.0-alpha.2
 
 ### Noteworthy changes
