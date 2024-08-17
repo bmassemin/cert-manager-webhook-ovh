@@ -34,6 +34,7 @@ We appreciate your understanding and cooperation in maintaining a positive and p
 
 ## Release workflow
 
+- Update `charts/cert-manager-webhook-ovh/Chart.yaml`
 - Prepare `CHANGELOG.md` for `x.y.z`
 - Commit all changes
 - Push all commits
