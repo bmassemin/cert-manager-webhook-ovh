@@ -65,7 +65,7 @@ Take note of the `ApplicationKey`, `ApplicationSecret` and `ConsumerKey` and sav
 
 The configuration is done via `values.yaml` and for complete details, you should refer to the [repository](https://github.com/aureq/cert-manager-webhook-ovh/blob/main/charts/cert-manager-webhook-ovh/values.yaml).
 
-- `schemaVersion` The schema version is used each time a breaking changes introduced in `values.yaml` to prevent broken deployments. To retrieve the latest `values.yaml` which contains the upgraded configuration and the correct schema version, run `helm show values cert-manager-webhook-ovh-charts/cert-manager-webhook-ovh`.
+- `configVersion` The config version is used each time a breaking changes introduced in `values.yaml` to prevent broken deployments. To retrieve the latest `values.yaml` which contains the updated configuration and the correct config version, run `helm show values cert-manager-webhook-ovh-charts/cert-manager-webhook-ovh`.
 - `groupName` The GroupName here is used to identify your company or business unit that created this webhook.
 - `certManager`
   - `namespace: cert-manager`: namespace where cert-manager is installed
