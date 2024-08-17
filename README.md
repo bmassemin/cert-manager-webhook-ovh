@@ -63,7 +63,7 @@ Take note of the `ApplicationKey`, `ApplicationSecret` and `ConsumerKey` and sav
 
 ## Configuration
 
-The configuration is done via `values.yam` and for complete details, you should refer to the [repository](https://github.com/aureq/cert-manager-webhook-ovh/blob/main/charts/cert-manager-webhook-ovh/values.yaml).
+The configuration is done via `values.yaml` and for complete details, you should refer to the [repository](https://github.com/aureq/cert-manager-webhook-ovh/blob/main/charts/cert-manager-webhook-ovh/values.yaml).
 
 - `groupName` The GroupName here is used to identify your company or business unit that created this webhook.
 - `certManager`
