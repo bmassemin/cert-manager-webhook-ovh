@@ -8,7 +8,7 @@
 # here is recommended.
 groupName: acme.mycompany.example
 
-# The values below should match your cert-amanger deployment.
+# The values below should match your cert-manager deployment.
 # If not, you will get permissions errors.
 certManager:
   # namespace in which your cert-manager is deployed
@@ -23,7 +23,7 @@ issuers:
     # This is disabled by default
     create: false
     # Type of issuer. Can either be ClusterIssuer or Issuer.
-    # If issuer is specified, the the namespace is required.
+    # If issuer is specified, the namespace is required.
     # See for more information https://cert-manager.io/docs/concepts/issuer/
     kind: ClusterIssuer
     # If kind is issuer, then indicate the namespace in which this
@@ -32,7 +32,7 @@ issuers:
     # Follow CNAME records or not. 2 options:
     # - None (default): Don't follow CNAME records
     # - Follow: Follow CNAME records
-    # See https://cert-manager.io/docs/configuration/acme/dns01/#delegated-domains-for-dns01 for more informations
+    # See https://cert-manager.io/docs/configuration/acme/dns01/#delegated-domains-for-dns01 for more information
     cnameStrategy: None
     # The acme server url. For Let's encrypt, you have 2 options:
     # - for production (default): https://acme-v02.api.letsencrypt.org/directory
@@ -67,7 +67,7 @@ issuers:
     #     key: applicationKey
     #   # The secret reference to an existing OVH application secret.
     #   applicationSecretRef:
-    #     # Name of thhe Kubernetes secret containing the OVH Application Secret
+    #     # Name of the Kubernetes secret containing the OVH Application Secret
     #     name: ovh-credentials
     #     # The key name in the secret above that holds the actual OVH application secret value
     #     key: applicationSecret
@@ -93,13 +93,13 @@ issuers:
     # Follow CNAME records or not. 2 options:
     # - None (default): Don't follow CNAME records
     # - Follow: Follow CNAME records
-    # See https://cert-manager.io/docs/configuration/acme/dns01/#delegated-domains-for-dns01 for more informations
+    # See https://cert-manager.io/docs/configuration/acme/dns01/#delegated-domains-for-dns01 for more information
     cnameStrategy: None
     # The acme server url. For Let's encrypt, you have 2 options:
     # - for production (default): https://acme-v02.api.letsencrypt.org/directory
     # - for staging: https://acme-staging-v02.api.letsencrypt.org/directory
     acmeServerUrl: https://acme-staging-v02.api.letsencrypt.org/directory
-    # email to use when registrering your account with Let's encrypt.
+    # email to use when registering your account with Let's encrypt.
     email: acme@example.net
     # The endpoint name of the OVH API. It must be one of the following:
     # ovh-eu, ovh-ca, kimsufi-eu, kimsufi-ca, soyoustart-eu, soyoustart-ca, runabove-ca
@@ -128,7 +128,7 @@ issuers:
     #     key: applicationSecret
     #   # The secret reference to an existing OVH application secret.
     #   applicationSecretRef:
-    #     # Name of thhe Kubernetes secret containing the OVH Application Secret
+    #     # Name of the Kubernetes secret containing the OVH Application Secret
     #     name: ovh-credentials
     #     # The key name in the secret above that holds the actual OVH application secret value
     #     key: applicationSecret
@@ -191,8 +191,8 @@ service:
 # with pods' IP CIDR and admission webhooks are not working
 hostNetwork: false
 
-# The port used by the applciation to expose the service.
-# It may be usefull to change it if the hostNetwork mode is activated to use an available port.
+# The port used by the application to expose the service.
+# It may be useful to change it if the hostNetwork mode is activated to use an available port.
 port: 8443
 
 resources: {}
