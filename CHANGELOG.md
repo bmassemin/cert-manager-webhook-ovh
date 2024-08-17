@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.7.0-alpha.1
+
+### Noteworthy changes
+
+- ✨ Add new `schemaVersion` to assist with breaking change
+- 🌿 Prefix error messages with 'Error:'
+- 🐛 Address minor typography issues in documentation.
+
+### Dependencies
+
+- ⏩ Use Alpine to 3.20 and Golang 1.23 as build image
+- ⏩ Use Alpine to 3.20 as base image
+- ⏩ Use Go 1.23.0 to build webhook
+- ⏩ Bump github.com/cert-manager/cert-manager 1.14.1 to 1.15.3
+- ⏩ Bump github.com/ovh/go-ovh from 1.4.3 to 1.6.0
+- ⏩ Bump k8s.io/api from 0.29.1 to 0.30.1
+- ⏩ Bump k8s.io/apiextensions-apiserver from 0.29.1 to 0.30.1
+- ⏩ Bump golang.org/x/net from 0.20.0 to 0.23.0
+
 ## 0.6.0
 
 ### Noteworthy changes
