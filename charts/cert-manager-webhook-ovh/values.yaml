@@ -1,3 +1,14 @@
+# The `schemaVersion` is used to assist with breaking changes before an upgrade
+# is applied.
+# Each time breaking change are introduced, the internal `schemaVersion` is
+# increased. If the user doesn't set the correct `schemaVersion` in their
+# `values.yaml` indicating they have performed the required configuration
+# changes, the new Chart version won't be installed preventing any outages.
+# The latest `values.yaml` contains the correct `schemaVersion` but the line is
+# commented. The latest `values.yaml` can be retrieved with the command below:
+#    helm show values cert-manager-webhook-ovh-charts/cert-manager-webhook-ovh
+# schemaVersion: 0.0.1
+
 # The GroupName here is used to identify your company or business unit that
 # created this webhook.
 # For example, this may be "acme.mycompany.example".
